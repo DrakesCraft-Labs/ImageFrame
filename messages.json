@@ -52,6 +52,7 @@
   "imageframe.messages.access_permission.types.none": "NONE",
   "imageframe.messages.access_permission.types.get": "GET",
   "imageframe.messages.access_permission.types.marker": "MARKER",
+  "imageframe.messages.access_permission.types.draw": "DRAW",
   "imageframe.messages.access_permission.types.edit": "EDIT",
   "imageframe.messages.access_permission.types.edit_clone": "EDIT WITH CLONE",
   "imageframe.messages.access_permission.types.all": "ALL",

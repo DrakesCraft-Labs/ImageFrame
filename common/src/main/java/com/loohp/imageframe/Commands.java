@@ -120,9 +120,11 @@ public class Commands implements CommandExecutor, TabCompleter {
 
         if (args[0].equalsIgnoreCase("reload")) {
             if (sender.hasPermission("imageframe.reload")) {
-                ImageFrame.plugin.reloadConfig();
-                ImageFrame.languageManager.reloadLanguages();
-                sendMessage(sender, translatable(RELOADED).color(NamedTextColor.GREEN));
+                Scheduler.runTaskAsynchronously(ImageFrame.plugin, () -> {
+                    ImageFrame.plugin.reloadConfig();
+                    ImageFrame.languageManager.reloadLanguages();
+                    sendMessage(sender, translatable(RELOADED).color(NamedTextColor.GREEN));
+                });
             } else {
                 sendMessage(sender, translatable(NO_PERMISSION).color(NamedTextColor.RED));
             }
