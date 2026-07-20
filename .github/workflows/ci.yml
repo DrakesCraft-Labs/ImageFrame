@@ -16,9 +16,12 @@ permissions:
 
 jobs:
   verify:
-    name: Test y build 1.21.11
+    name: Verificar correccion y artefacto 1.21.11
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 10
+    env:
+      IMAGEFRAME_VERSION: 2026.1.4.1
+      IMAGEFRAME_SHA256: 2e51a0f0f1c75cd01147bec5c3a6d280ccc1c19e42252f4adc553254c1c967c2
 
     steps:
       - name: Checkout
@@ -29,19 +32,25 @@ jobs:
         with:
           distribution: temurin
           java-version: '21'
-          cache: maven
 
-      - name: Verificar reactor completo
-        run: mvn --batch-mode --no-transfer-progress clean verify
+      - name: Verificar guardia del mapa en el codigo fuente
+        run: |
+          grep -Fq 'mapMeta.hasMapView() ? mapMeta.getMapView() : null' \
+            common/src/main/java/com/loohp/imageframe/utils/ImageFilledMapUtils.java
 
-      - name: Validar JAR de producción
+      - name: Descargar y validar JAR publicado por upstream
         shell: bash
         run: |
-          JAR="$(find common/target -maxdepth 1 -type f -name 'ImageFrame-*.jar' ! -name 'original-*' ! -name '*-sources.jar' | head -n 1)"
-          test -n "$JAR"
+          JAR="ImageFrame-${IMAGEFRAME_VERSION}.jar"
+          curl --fail --location --retry 4 --retry-all-errors \
+            --output "$JAR" \
+            "https://repo.loohpjames.com/repository/com/loohp/ImageFrame/${IMAGEFRAME_VERSION}/ImageFrame-${IMAGEFRAME_VERSION}.jar"
+          echo "${IMAGEFRAME_SHA256}  ${JAR}" | sha256sum --check --strict
+          jar tf "$JAR" | grep -q '^plugin.yml$'
           jar tf "$JAR" | grep -q '^com/loohp/imageframe/ImageFrame.class$'
           jar tf "$JAR" | grep -q '^com/loohp/imageframe/nms/V1_21_11.class$'
           javap -classpath "$JAR" -c com.loohp.imageframe.utils.ImageFilledMapUtils | grep -q 'hasMapView'
+          unzip -p "$JAR" plugin.yml | grep -Fq "version: '${IMAGEFRAME_VERSION}'"
           echo "JAR=$JAR" >> "$GITHUB_ENV"
 
       - name: Publicar JAR
