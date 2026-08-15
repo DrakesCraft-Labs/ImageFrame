@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/DrakesCraft-Labs/ImageFrame/main/banner.svg" width="100%" alt="IMAGE FRAME animated banner" />
+</p>
+
 [![Build Status](https://ci.loohpjames.com/job/ImageFrame/badge/icon)](https://ci.loohpjames.com/job/ImageFrame/) [![Crowdin](https://badges.crowdin.net/imageframe/localized.svg)](https://crowdin.com/project/imageframe)
 # ImageFrame
 
@@ -49,3 +53,4 @@ It also **supports my development**, take it as an alternative way to donate whi
 **https://www.bisecthosting.com/loohp**
 
 [![](https://www.bisecthosting.com/partners/custom-banners/96e11ee5-50e4-494f-854d-8c1708813abd.png)](https://www.bisecthosting.com/loohp)
+
