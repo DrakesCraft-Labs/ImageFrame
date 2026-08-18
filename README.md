@@ -5,6 +5,16 @@
 [![Build Status](https://ci.loohpjames.com/job/ImageFrame/badge/icon)](https://ci.loohpjames.com/job/ImageFrame/) [![Crowdin](https://badges.crowdin.net/imageframe/localized.svg)](https://crowdin.com/project/imageframe)
 # ImageFrame
 
+> ### 🏰 ¡Únete a la Comunidad Oficial de DrakesCraft!
+> 
+> * 🎮 **IP del Servidor**: `play.drakescraft.net` *(Java 1.21.11 & Bedrock)*
+> * 💬 **Discord Oficial**: [discord.gg/drakescraft](https://discord.gg/rR7FbfCt9Y)
+> * 🌐 **Web & Guía**: [drakescraft.net](https://drakescraft.net) — 🛒 **Tienda**: [tienda.drakescraft.net](https://tienda.drakescraft.net)
+> 
+> *¡Juega con este addon y más de 80 expansiones optimizadas en vivo en nuestra network de supervivencia técnica!*
+
+---
+
 https://www.spigotmc.org/resources/106031/<br>
 https://modrinth.com/plugin/imageframe<br>
 https://hangar.papermc.io/LOOHP/ImageFrame
