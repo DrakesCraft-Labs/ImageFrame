@@ -64,3 +64,13 @@ It also **supports my development**, take it as an alternative way to donate whi
 
 [![](https://www.bisecthosting.com/partners/custom-banners/96e11ee5-50e4-494f-854d-8c1708813abd.png)](https://www.bisecthosting.com/loohp)
 
+
+## ⚖️ Upstream Attribution & License / Licencia y Créditos
+
+- **Original Project / Upstream**: Slimefun4 Community Addon.
+- **Port & Maintenance**: DrakesCraft Labs team (Compatibility for Paper / Purpur 1.21.11).
+- **License**: GPL-3.0 / MIT.
+- **Source Code**: [GitHub Repository](https://github.com/DrakesCraft-Labs/ImageFrame)
+- **Support & Issues**: [GitHub Issues](https://github.com/DrakesCraft-Labs/ImageFrame/issues) | [Discord](https://discord.gg/rR7FbfCt9Y)
+
+*This project is an open-source derivative work maintained by DrakesCraft Labs under the terms of its original license. All original assets and concepts belong to their respective creators.*
